@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhvv2p5s525tf"]
+
+[ext_resource type="PackedScene" uid="uid://c58amvhwupgck" path="res://placeholder/mutant/mutant.tscn" id="1_csba1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_igxa3"]
+size = Vector3(10, 1, 10)
+
+[node name="TestScene" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0487919, -1.90735e-06, -0.0633507)
+mesh = SubResource("BoxMesh_igxa3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.960542, 0.278136, 0, -0.278136, 0.960542, 0, 1, 1)
+
+[node name="Mutant" parent="." instance=ExtResource("1_csba1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.697711, 0)
+
+[node name="Mutant2" parent="." instance=ExtResource("1_csba1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.309873, 0.697711, 0.214638)
+
+[node name="Mutant3" parent="." instance=ExtResource("1_csba1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30764, 0.697711, 0.152907)

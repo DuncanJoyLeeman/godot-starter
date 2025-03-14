@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DeveloperSettings" load_steps=2 format=3 uid="uid://dvgxu3pbyi66e"]
+
+[ext_resource type="Script" uid="uid://bag8sox7sye4y" path="res://scripts/settings/developer_settings.gd" id="1_qv58v"]
+
+[resource]
+script = ExtResource("1_qv58v")
+console_enabled = true
+fps_meter = true

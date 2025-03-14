@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DisplaySettings" load_steps=2 format=3 uid="uid://cr7rsonpgxeoh"]
+
+[ext_resource type="Script" uid="uid://mibkng67hp1o" path="res://scripts/settings/display_settings.gd" id="1_t4738"]
+
+[resource]
+script = ExtResource("1_t4738")
+resolution = Vector2i(1920, 1080)
+fps_limit = 60
+window_mode = 4
+vsync_mode = 0

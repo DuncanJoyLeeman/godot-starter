@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="MapLibrary" load_steps=2 format=3 uid="uid://02yawo31ucc6"]
+
+[ext_resource type="Script" uid="uid://umnil706507d" path="res://scripts/map_loader/map_library.gd" id="1_i7j1e"]
+
+[resource]
+script = ExtResource("1_i7j1e")
+maps = Array[PackedScene]([])

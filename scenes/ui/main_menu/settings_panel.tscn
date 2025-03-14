@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://lk53dn0yc03o"]
+
+[ext_resource type="PackedScene" uid="uid://bnp33g0fkqu7v" path="res://scenes/ui/main_menu/settings_tabs/display_settings.tscn" id="1_0funt"]
+[ext_resource type="Script" uid="uid://dvmpea4uihcxd" path="res://scripts/ui/settings_panel.gd" id="1_4wfo7"]
+[ext_resource type="PackedScene" uid="uid://8yvxpd73j2rr" path="res://scenes/ui/main_menu/settings_tabs/graphics_settings.tscn" id="2_dkk08"]
+[ext_resource type="PackedScene" uid="uid://dmtuxy4ohreth" path="res://scenes/ui/main_menu/settings_tabs/audio_settings.tscn" id="3_6m2m8"]
+[ext_resource type="PackedScene" uid="uid://6qikcbv84u4r" path="res://scenes/ui/main_menu/settings_tabs/input_settings.tscn" id="4_rnt5h"]
+[ext_resource type="PackedScene" uid="uid://cvla1w8l6o3ub" path="res://scenes/ui/main_menu/settings_tabs/developer_settings.tscn" id="5_f6ufh"]
+
+[node name="SettingsPanel" type="TabContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+script = ExtResource("1_4wfo7")
+
+[node name="Display" parent="." instance=ExtResource("1_0funt")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Graphics" parent="." instance=ExtResource("2_dkk08")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Sound" parent="." instance=ExtResource("3_6m2m8")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Input" parent="." instance=ExtResource("4_rnt5h")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Developer" parent="." instance=ExtResource("5_f6ufh")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4

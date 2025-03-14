@@ -1,0 +1,118 @@
+[gd_scene load_steps=4 format=3 uid="uid://lxkwoa336euy"]
+
+[ext_resource type="Script" uid="uid://fim8mtt7p1qn" path="res://scripts/ui/main_menu.gd" id="1_7o1jr"]
+[ext_resource type="Theme" uid="uid://dxluofe4aox5v" path="res://resources/ui/main_menu_theme.tres" id="1_nr82v"]
+[ext_resource type="PackedScene" uid="uid://lk53dn0yc03o" path="res://scenes/ui/main_menu/settings_panel.tscn" id="3_am27y"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_nr82v")
+script = ExtResource("1_7o1jr")
+
+[node name="MainButtons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="Control" parent="MainButtons"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = 30.0
+grow_vertical = 2
+
+[node name="Top" type="Control" parent="MainButtons/Left"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Center" type="Control" parent="MainButtons/Left"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainButtons/Left/Center"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 93.0
+grow_vertical = 2
+
+[node name="ContinueButton" type="Button" parent="MainButtons/Left/Center/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Continue"
+
+[node name="StartButton" type="Button" parent="MainButtons/Left/Center/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "New Game"
+
+[node name="SettingsButton" type="Button" parent="MainButtons/Left/Center/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Bottom" type="Control" parent="MainButtons/Left"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -148.0
+offset_right = 40.0
+offset_bottom = -108.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainButtons/Left/Bottom"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 87.0
+grow_vertical = 2
+
+[node name="ExitButton" type="Button" parent="MainButtons/Left/Bottom/VBoxContainer"]
+layout_mode = 2
+text = "Exit Game"
+
+[node name="Center" type="Control" parent="MainButtons"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Right" type="Control" parent="MainButtons"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="SettingsPanel" parent="." instance=ExtResource("3_am27y")]
+visible = false
+layout_mode = 1
+offset_left = 341.0
+offset_top = 40.0
+offset_right = -236.0
+offset_bottom = -8.0
+theme_override_font_sizes/font_size = 12
+
+[connection signal="pressed" from="MainButtons/Left/Center/VBoxContainer/SettingsButton" to="SettingsPanel" method="_toggle_display"]
+[connection signal="pressed" from="MainButtons/Left/Bottom/VBoxContainer/ExitButton" to="." method="_close_game"]

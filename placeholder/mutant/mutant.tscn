@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://c58amvhwupgck"]
+
+[ext_resource type="Texture2D" uid="uid://cpoy1w6iq2ynj" path="res://placeholder/mutant/sprites/walking.png" id="1_tsyid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol4l8"]
+atlas = ExtResource("1_tsyid")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etnvo"]
+atlas = ExtResource("1_tsyid")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5m5o"]
+atlas = ExtResource("1_tsyid")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qhjl"]
+atlas = ExtResource("1_tsyid")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l400q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ol4l8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etnvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5m5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qhjl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mutant" type="Node3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_l400q")
+autoplay = "default"
+frame_progress = 0.432775

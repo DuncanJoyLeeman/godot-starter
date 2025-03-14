@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="GraphicsSettings" load_steps=2 format=3 uid="uid://14afdqbduy6f"]
+
+[ext_resource type="Script" uid="uid://c3o6jo2whocex" path="res://scripts/settings/graphics_settings.gd" id="1_punwu"]
+
+[resource]
+script = ExtResource("1_punwu")

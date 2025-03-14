@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Settings" load_steps=6 format=3 uid="uid://cj1xpe65hare2"]
+
+[ext_resource type="Script" uid="uid://bfmmc8g4u8f07" path="res://scripts/settings/settings.gd" id="1_7vqt4"]
+[ext_resource type="Resource" uid="uid://p3cruefgnref" path="res://resources/settings/default_audio_settings.tres" id="1_psfj7"]
+[ext_resource type="Resource" uid="uid://cr7rsonpgxeoh" path="res://resources/settings/default_display_settings.tres" id="1_qtydj"]
+[ext_resource type="Resource" uid="uid://14afdqbduy6f" path="res://resources/settings/default_graphic_settings.tres" id="2_awkp7"]
+[ext_resource type="Resource" uid="uid://dvgxu3pbyi66e" path="res://resources/settings/default_developer_settings.tres" id="2_x5vh1"]
+
+[resource]
+script = ExtResource("1_7vqt4")
+display_settings = ExtResource("1_qtydj")
+grapics_settings = ExtResource("2_awkp7")
+developer_settings = ExtResource("2_x5vh1")
+audio_settings = ExtResource("1_psfj7")

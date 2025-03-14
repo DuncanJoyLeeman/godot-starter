@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dxluofe4aox5v"]
+
+[ext_resource type="FontFile" uid="uid://cslcf0s30kx2" path="res://resources/ui/fonts/RobotoMono-SemiBold.ttf" id="1_l3jao"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kuuo"]
+bg_color = Color(0.460294, 0.441679, 0.423231, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idvw3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jrnq3"]
+
+[resource]
+default_font = ExtResource("1_l3jao")
+default_font_size = 35
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxFlat_4kuuo")
+Button/styles/normal = SubResource("StyleBoxFlat_idvw3")
+Button/styles/pressed = SubResource("StyleBoxFlat_jrnq3")
